@@ -26,6 +26,7 @@
 
 module.exports = {
 	   title: '个人主页', 
+	   base:'/blog/',
 	   description: '一个互联网全才妹子，会设计，会前端，会后端，还会视频动效，好像并没有什么卵用。。。。。。。',
 	   // head: [
 	   //  	['link', { rel: 'icon', href: '/img/logo.ico' }],
