@@ -39,12 +39,12 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: 'vue源码解读', link: '/home/' },
             { text: 'JS基础', link: '/base/' }, 
-            { text: '面试题', link: '/interview/' },
+            { text: '源码阅读之路', link: '/source/' },
             // { text: '面试题', link: '/interview/' },
-
           
 	        { text: '博文',
 	          items: [
+	            { text: '面试题', link: '/interview/' },
 	            { text: '随想', link: '/essay/' },
 	            { text: '设计', link: 'https://saintgirl.zcool.com.cn' },
 	            // { text: '日语', link: '/Japanese/' },
@@ -87,7 +87,14 @@ module.exports = {
 			    title: '随想',
 			    collapsable: false,
 			    children: [
-		           '',
+		           // '','/essay/import'
+		        ]
+		    }],
+		     '/source/': [{
+			    title: '读源码,造轮子',
+			    collapsable: false,
+			    children: [
+		           ''
 		        ]
 		    }]
         },
