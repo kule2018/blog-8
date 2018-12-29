@@ -324,7 +324,7 @@ Parser.prototype.tok = function() {
 ```
 
 
-```
+```js
 // this.inline.output把**marked**处理成<strong>marked</strong>
 this.renderer.paragraph(this.inline.output(this.token.text));
 /**
@@ -378,9 +378,9 @@ Renderer.prototype.strong = function(text) {
   没有id就直接返回标签加纹板
   return '<h' + level + '>' + text + '</h' + level + '>\n';
 };
-同理
+// 同理
 
-paragraph对this.token说[2]做了处理
+// paragraph对this.token说[2]做了处理
 Renderer.prototype.paragraph = function(text) {
   return '<p>' + text + '</p>\n';
 };
@@ -400,14 +400,16 @@ document.getElementById('content').innerHTML =marked('# Marked in the browser\n\
 这个实例就分析完毕了,当然里面还有其他的细节,有兴趣的可以仔细看看,比如什么时候会带有id等等
 我们总结一下marked.js是如何处理的
 最重要的就是
-1.先是正则,把符号匹配出来,#是heading,然后推入this.tokens数组里
-每处理一行,推入一个(把scr通过正则处理成this.tokens))
-2.对this.tokens的处理,通过正则匹配到就调用相应的render对象里的方法
-3.render对象对输入的tokens进行处理返回out处理结果
 
+1. 先是正则,把符号匹配出来,#是heading,然后推入this.tokens数组里
+ 每处理一行,推入一个(把scr通过正则处理成this.tokens))
+2. 对this.tokens的处理,通过正则匹配到就调用相应的render对象里的方法
+3. render对象对输入的tokens进行处理返回out处理结果
 
-- 1.每一个功能都分别定义一个函数 render渲染用, laxer词法解析用,实现定义好各种正则,很清晰明明了
-- 2.静态方法的使用
+优点
+
+1. 每一个功能都分别定义一个函数 render渲染用, laxer词法解析用,实现定义好各种正则,很清晰明明了
+2. 静态方法的使用
 
 总之看着很复杂,当你分析完一个或者写完一个明白一个后,其他的都是依此类推,就是力气活了
 

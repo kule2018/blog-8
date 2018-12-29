@@ -94,7 +94,7 @@ module.exports = {
 			    title: '读源码,造轮子',
 			    collapsable: false,
 			    children: [
-		           ''
+					'','/source/react-beauty-highcharts'
 		        ]
 		    }]
         },
