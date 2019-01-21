@@ -38,8 +38,9 @@ module.exports = {
         nav: [
             { text: '主页', link: '/' },
             { text: 'vue源码解读', link: '/home/' },
+            { text: 'webpack源码解读', link: '/webpack/' },
             { text: 'JS基础', link: '/base/' }, 
-            { text: '源码阅读之路', link: '/source/' },
+            { text: '其他', link: '/source/' },
             // { text: '面试题', link: '/interview/' },
           
 	        { text: '博文',
@@ -74,6 +75,13 @@ module.exports = {
 			    collapsable: false,
 			    children: [
 		           '','/base/two','/base/three','/base/four','/base/five'
+		        ]
+		    }],
+		    '/webpack/': [{
+			    title: 'webpack源码系列解析',
+			    collapsable: false,
+			    children: [
+		           '','/webpack/webpack2','/webpack/webpack3','/webpack/webpack4','/webpack/webpack5','/webpack/webpack6','/webpack/webpack6.1','/webpack/webpack7','/webpack/webpack8','/webpack/webpack9','/webpack/webpack10',
 		        ]
 		    }],
 		    '/interview/': [{
